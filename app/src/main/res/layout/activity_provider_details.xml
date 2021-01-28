@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProviderDetails">
+
+    <LinearLayout
+        android:layout_gravity="start"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/details"
+        android:layout_height="130dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Name"
+                android:id="@+id/detail_name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Address"
+                android:maxLines="2"
+                android:id="@+id/detail_address"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="State"
+                android:id="@+id/detail_state"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Description"
+                android:id="@+id/detail_description"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Rating"
+                android:id="@+id/detail_rating"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Type"
+                android:id="@+id/detail_type"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="Status"
+                android:id="@+id/detail_status"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridView
+        android:numColumns="auto_fit"
+        android:columnWidth="100dp"
+        android:layout_margin="8dp"
+        android:verticalSpacing="24dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="spacingWidthUniform"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/provider_images"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_provider_fab"
+        android:layout_margin="32dp"
+        android:background="@android:drawable/ic_input_add"
+        android:tint="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"/>
+
+</RelativeLayout>
